@@ -19,6 +19,13 @@
   </nav>
   <a class="btn btn-outline-primary" href="#">Sign up</a>
 </div>
+
+  <!--ALERTS-->
+  <div class="container">
+    <% if notice %><div class="alert alert-info"><%= notice %></div><% end %>
+    <% if alert %><div class="alert alert-warning"><%= alert %></div><% end %>
+  </div>
+
     <%= yield %>
 
   <!--FOOTER-->
