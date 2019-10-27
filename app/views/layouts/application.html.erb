@@ -16,10 +16,13 @@
   <nav class="my-2 my-md-0 mr-md-3">
     <a class="p-2 text-dark" href="#">Option1</a>
     <a class="p-2 text-dark" href="#">Option2</a>
+  <% if user_signed_in? %>
+    <a class="p-2 text-dark"><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></a>
+  <% else %>
     <a class="p-2 text-dark"><%= link_to 'Sign In', new_user_session_path %></a>
   </nav>
   <li class="btn btn-outline-primary"><%= link_to 'Sign Up', new_user_registration_path %></li>
-  
+  <% end %>
 </div>
 
   <!--ALERTS-->
@@ -36,5 +39,16 @@
       <small>Software Ver: (Alpha) 1.0.5 &copy; Development by BJ Petrie</small>
     </div>
   </footer>
+  <!--JS For Alert Fade-->
+  <script type="text/javascript">
+
+$(document).ready(function () {
+ window.setTimeout(function() {
+    $(".alert").fadeTo(2000, 0).slideUp(1000, function(){
+        $(this).remove(); 
+    });
+}, 2000);
+});
+</script>
   </body>
 </html>
