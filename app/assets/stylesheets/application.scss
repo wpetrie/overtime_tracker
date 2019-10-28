@@ -12,4 +12,9 @@
  *
  *= require font-awesome
  */
- @import "bootstrap"
+ @import "bootstrap";
+
+.clear { 
+    clear: both; 
+    height: 100px; 
+}

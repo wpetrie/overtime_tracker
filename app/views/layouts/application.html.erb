@@ -17,11 +17,11 @@
     <a class="p-2 text-dark" href="#">Option1</a>
     <a class="p-2 text-dark" href="#">Option2</a>
   <% if user_signed_in? %>
-    <a class="p-2 text-dark"><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></a>
+    <a class="p-2 text-dark"><%= link_to 'Log Out', destroy_user_session_path, method: :delete, :class => "btn btn-outline-primary" %></a>
   <% else %>
     <a class="p-2 text-dark"><%= link_to 'Sign In', new_user_session_path %></a>
   </nav>
-  <li class="btn btn-outline-primary"><%= link_to 'Sign Up', new_user_registration_path %></li>
+  <%= link_to 'Sign Up', new_user_registration_path, :class => "btn btn-outline-primary" %>
   <% end %>
 </div>
 
@@ -34,6 +34,7 @@
     <%= yield %>
 
   <!--FOOTER-->
+  <div class="clear"></div>
     <footer id="sticky-footer" class="fixed-bottom py-4 bg-dark text-white-50">
     <div class="container text-center">
       <small>Software Ver: (Alpha) 1.0.5 &copy; Development by BJ Petrie</small>

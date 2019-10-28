@@ -16,11 +16,13 @@
         <ul class="list-unstyled mt-3 mb-4">
           <li>Logged in as: <b>BJ Petrie</b></li>
           <li>Reg Number: <b>1277</b></li>
+          <li>Platoon: <b>B</b></li>
           <li>Phone: <b>902 537-0908</b></li>
           <li>Alt Phone: <b>902 270-6470</b></li>
+          &nbsp
           <li class="alert1 alert-success"><b>Available</b></li>
         </ul>
-        <button type="button" class="mt-auto btn btn-lg btn-block btn-primary">Edit Account</button>
+        <%= link_to 'Edit Profile', edit_user_registration_path, :class => "mt-auto btn btn-lg btn-block btn-primary"%>
       </div>
     </div>
     <div class="card mb-4 shadow-sm">

@@ -6,11 +6,36 @@
     </div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "devise/shared/error_messages", resource: resource %>
+<%= render "devise/shared/error_messages", resource: resource %></div>
+
+  <div class="form-group">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+  </div>
 
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :reg_number %><br />
+    <%= f.number_field :reg_number %>
+  </div>
+
+    <div class="form-group">
+    <%= f.label :platoon %><br />
+    <%= f.select :platoon, [['A','A'],['B','B'],['C','C'],['D','D'],['Ops','Ops']] %>
+  </div>
+
+    <div class="form-group">
+    <%= f.label :phone %><br />
+    <%= f.telephone_field :phone %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :alt_phone %><br />
+    <%= f.telephone_field :alt_phone %>
   </div>
 
   <div class="field">
