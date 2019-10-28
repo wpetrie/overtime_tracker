@@ -1,0 +1,197 @@
+<div class="accordion" id="accordionExample">
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+          "A Platoon"
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Reg Number</th> 
+                    <th>Phone</th> 
+                    <th>Alt Phone</th> 
+                    <th>Availablility</th>   
+                </tr>
+            </thead>
+            <tbody>
+                <% @a_platoon.each do |a_platoon| %>
+                    <tr>
+                        <td><%= a_platoon.name %></td>
+                        <td><%= a_platoon.reg_number %></td>
+                        <td><%= number_to_phone(a_platoon.phone) %></td>
+                        <td><%= number_to_phone(a_platoon.alt_phone) %></td>
+                        <% if a_platoon.available == true %>
+                        <td class="badge badge-success">Available</button></td>
+                        <% else %>
+                        <td class="badge badge-danger">Not Available</td>
+                        <% end %>
+                    <% end %>
+            </tbody>
+        </table>                        
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingTwo">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          "B Platoon"
+        </button>
+      </h2>
+    </div>
+    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+      <div class="card-body">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Reg Number</th> 
+                    <th>Phone</th> 
+                    <th>Alt Phone</th> 
+                    <th>Availablility</th>   
+                </tr>
+            </thead>
+            <tbody>
+                <% @b_platoon.each do |b_platoon| %>
+                    <tr>
+                        <td><%= b_platoon.name %></td>
+                        <td><%= b_platoon.reg_number %></td>
+                        <td><%= number_to_phone(b_platoon.phone) %></td>
+                        <td><%= number_to_phone(b_platoon.alt_phone) %></td>
+                        <% if b_platoon.available == true %>
+                        <td class="badge badge-success">Available</button></td>
+                        <% else %>
+                        <td class="badge badge-danger">Not Available</td>
+                        <% end %>
+                    <% end %>
+            </tbody>
+        </table>                        
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingThree">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+            "C Platoon"        
+        </button>
+      </h2>
+    </div>
+    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+      <div class="card-body">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Reg Number</th> 
+                    <th>Phone</th> 
+                    <th>Alt Phone</th> 
+                    <th>Availablility</th>   
+                </tr>
+            </thead>
+            <tbody>
+                <% @c_platoon.each do |c_platoon| %>
+                    <tr>
+                        <td><%= c_platoon.name %></td>
+                        <td><%= c_platoon.reg_number %></td>
+                        <td><%= number_to_phone(c_platoon.phone) %></td>
+                        <td><%= number_to_phone(c_platoon.alt_phone) %></td>
+                        <% if c_platoon.available == true %>
+                        <td class="badge badge-success">Available</button></td>
+                        <% else %>
+                        <td class="badge badge-danger">Not Available</td>
+                        <% end %>
+                    <% end %>
+            </tbody>
+        </table>                        
+      </div>
+    </div>
+  </div>      
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+          "D Platoon"
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseFour" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Reg Number</th> 
+                    <th>Phone</th> 
+                    <th>Alt Phone</th> 
+                    <th>Availablility</th>   
+                </tr>
+            </thead>
+            <tbody>
+                <% @d_platoon.each do |d_platoon| %>
+                    <tr>
+                        <td><%= d_platoon.name %></td>
+                        <td><%= d_platoon.reg_number %></td>
+                        <td><%= number_to_phone(d_platoon.phone) %></td>
+                        <td><%= number_to_phone(d_platoon.alt_phone) %></td>
+                        <% if d_platoon.available == true %>
+                        <td class="badge badge-success">Available</button></td>
+                        <% else %>
+                        <td class="badge badge-danger">Not Available</td>
+                        <% end %>
+                    <% end %>
+            </tbody>
+        </table>                        
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header" id="headingOne">
+      <h2 class="mb-0">
+        <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+          "Ops Platoon"
+        </button>
+      </h2>
+    </div>
+
+    <div id="collapseFive" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+      <div class="card-body">
+        <table class="table table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Reg Number</th> 
+                    <th>Phone</th> 
+                    <th>Alt Phone</th> 
+                    <th>Availablility</th>   
+                </tr>
+            </thead>
+            <tbody>
+                <% @ops_platoon.each do |ops_platoon| %>
+                    <tr>
+                        <td><%= ops_platoon.name %></td>
+                        <td><%= ops_platoon.reg_number %></td>
+                        <td><%= number_to_phone(ops_platoon.phone) %></td>
+                        <td><%= number_to_phone(ops_platoon.alt_phone) %></td>
+                        <% if ops_platoon.available == true %>
+                        <td class="badge badge-success">Available</button></td>
+                        <% else %>
+                        <td class="badge badge-danger">Not Available</td>
+                        <% end %>
+                    <% end %>
+            </tbody>
+        </table>                        
+      </div>
+    </div>
+  </div>
+<div class="text-center"><br />        
+    <%= link_to 'Back', home_index_path, :class => "mt-auto btn btn-lg btn-primary"%>
+</div>
