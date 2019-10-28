@@ -8,6 +8,7 @@ gem 'jquery-rails'
 gem 'autoprefixer-rails', '~> 9.7'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 gem 'devise', '~> 4.7', '>= 4.7.1'
+gem 'jquery_mask_rails'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
