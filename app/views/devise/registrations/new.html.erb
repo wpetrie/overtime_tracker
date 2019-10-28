@@ -6,7 +6,7 @@
     </div>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-<%= render "devise/shared/error_messages", resource: resource %></div>
+<%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="form-group">
     <%= f.label :name %><br />
@@ -23,12 +23,12 @@
     <%= f.number_field :reg_number %>
   </div>
 
-    <div class="form-group">
+  <div class="form-group">
     <%= f.label :platoon %><br />
     <%= f.select :platoon, [['A','A'],['B','B'],['C','C'],['D','D'],['Ops','Ops']] %>
   </div>
 
-    <div class="form-group">
+  <div class="form-group">
     <%= f.label :phone %><br />
     <%= f.telephone_field :phone %>
   </div>
@@ -52,7 +52,7 @@
   </div>
 &nbsp
   <div class="actions">
-    <%= f.submit "Sign up", class: "btn btn-primary"  %>
+    <%= f.submit "Sign up" %>
   </div>
 <% end %>
 

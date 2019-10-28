@@ -14,13 +14,18 @@
       <div class="card-body d-flex flex-column">
         <h1><%= fa_icon "address-book" %></h1>
         <ul class="list-unstyled mt-3 mb-4">
-          <li>Logged in as: <b>BJ Petrie</b></li>
-          <li>Reg Number: <b>1277</b></li>
-          <li>Platoon: <b>B</b></li>
-          <li>Phone: <b>902 537-0908</b></li>
-          <li>Alt Phone: <b>902 270-6470</b></li>
+          <li>Logged in as: <b><%= current_user.name %></b></li>
+          <li>Reg Number: <b><%= current_user.reg_number %></b></li>
+          <li>Platoon: <b><%= current_user.platoon %></b></li>
+          <li>Phone: <b><%= number_to_phone(current_user.phone) %></b></li>
+          <li>Alt Phone: <b><%= number_to_phone(current_user.alt_phone) %></b></li>
           &nbsp
-          <li class="alert1 alert-success"><b>Available</b></li>
+          
+           <% if current_user.available == true %>
+           <li class="alert1 alert-success"><b>Available for Calls</b></li>
+           <% else %>
+           <li class="alert1 alert-danger"><b>Not Available for Calls</b></li>
+          <% end %>
         </ul>
         <%= link_to 'Edit Profile', edit_user_registration_path, :class => "mt-auto btn btn-lg btn-block btn-primary"%>
       </div>
