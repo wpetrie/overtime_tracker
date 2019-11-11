@@ -10,22 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_10_28_152042) do
+ActiveRecord::Schema.define(version: 2019_11_11_175629) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "profiles", force: :cascade do |t|
-    t.string "name", default: "", null: false
-    t.integer "reg_number", null: false
-    t.string "platoon", default: "", null: false
-    t.integer "phone", null: false
-    t.integer "alt_phone", null: false
-    t.boolean "available", default: false
-    t.boolean "admin", default: false
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+  create_table "shifts", force: :cascade do |t|
+    t.string "name"
+    t.datetime "shift_date"
+    t.string "division"
+    t.integer "hours"
   end
 
   create_table "users", force: :cascade do |t|
@@ -42,6 +36,7 @@ ActiveRecord::Schema.define(version: 2019_10_28_152042) do
     t.bigint "phone"
     t.bigint "alt_phone"
     t.boolean "available", default: true
+    t.datetime "called_at"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
